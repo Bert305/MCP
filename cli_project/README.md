@@ -103,6 +103,19 @@ Edit the `mcp_server.py` file to add new documents to the `docs` dictionary.
 To fully implement the MCP features:
 
 1. Complete the TODOs in `mcp_server.py`
+1.4. cd to the cli_project directory
+1.5. To run the mcp_server.py file --> uv run mcp dev mcp_server.py
+1.6. Use the URL (Open inspector with token pre-filled:) of the MCP server to see the UI in the browser. Acitvates the MCP Inspector
+1.7. Click on the connect button, to start our MCP Server in the UI
+1.8. Click on tools (nav bar) --> list tools: to see the tools we programmed in the code
+1.9. Select one of the tools in the UI to activate it, notice the top right corner changes with an input box
+1.11. Copy and paste deposition.md into the read_doc_contents to run the tool and see the mirror output of the doc_id 
+
+![alt text](image.png)
+
+
+
+![alt text](image-1.png)
 2. Implement the missing functionality in `mcp_client.py`
 
 ### Linting and Typing Check

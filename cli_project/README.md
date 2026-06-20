@@ -4,7 +4,7 @@ MCP Chat is a command-line interface application that enables interactive chat c
 
 ## Prerequisites
 
-- Python 3.9+
+- Python 3.10+
 - Anthropic API Key
 
 ## Setup
@@ -21,7 +21,7 @@ ANTHROPIC_API_KEY=""  # Enter your Anthropic API secret key
 
 #### Option 1: Setup with uv (Recommended)
 
-[uv](https://github.com/astral-sh/uv) is a fast Python package installer and resolver.
+[uv](https://github.com/astral-sh/uv) is a fast Python package installer and resolver. This project is uv-managed (it has a `uv.lock`), so you don't need to create a virtual environment, activate it, or `pip install` anything manually — uv handles all of that.
 
 1. Install uv, if not already installed:
 
@@ -29,24 +29,23 @@ ANTHROPIC_API_KEY=""  # Enter your Anthropic API secret key
 pip install uv
 ```
 
-2. Create and activate a virtual environment:
+2. From the project directory (the folder containing `pyproject.toml`), sync the environment. This creates `.venv` and installs the locked dependencies:
 
 ```bash
-uv venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+cd cli_project   # if you aren't already inside it
+uv sync
 ```
 
-3. Install dependencies:
-
-```bash
-uv pip install -e .
-```
-
-4. Run the project
+3. Run the project. `uv run` automatically uses the project's environment — no activation step needed:
 
 ```bash
 uv run main.py
 ```
+
+> **Notes**
+> - Run `uv sync` / `uv run` from inside the project folder. Running elsewhere gives `error: No pyproject.toml found in current directory or any parent directory`.
+> - If you see `VIRTUAL_ENV ... does not match the project environment path`, you have another venv activated. It's only a warning — uv correctly ignores it and uses the project's `.venv`. Run `deactivate` to silence it.
+> - Re-run `uv sync` whenever dependencies change; otherwise `uv run main.py` is all you need day to day.
 
 #### Option 2: Setup without uv
 

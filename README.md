@@ -117,6 +117,7 @@ To fully implement the MCP features:
 1.9. Select one of the tools in the UI to activate it, notice the top right corner changes with an input box
   <p></p>
 1.11. Copy and paste deposition.md into the read_doc_contents to run the tool and see the mirror output of the doc_id 
+<p></p>
 
 <img width="672" height="510" alt="image" src="https://github.com/user-attachments/assets/e84451e4-d221-44aa-a479-9152fef9ee8d" />
 

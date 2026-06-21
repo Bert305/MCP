@@ -6,7 +6,7 @@ from mcp import ClientSession, StdioServerParameters, types
 from mcp.client.stdio import stdio_client
 import json
 from pydantic import AnyUrl 
-
+# :wq --> enter to finalize a git pull request
 # uv run mcp_client.py
 class MCPClient:
     def __init__(

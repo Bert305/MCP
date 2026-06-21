@@ -118,6 +118,10 @@ To fully implement the MCP features:
 ![alt text](image-1.png)
 2. Implement the missing functionality in `mcp_client.py`
 
+3. cd to the cli_project directory
+
+4. run: uv run mcp_client.py
+
 ### Linting and Typing Check
 
 There are no lint or type checks implemented.

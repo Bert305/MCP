@@ -12,6 +12,8 @@ from core.cli import CliApp
 
 load_dotenv()
 
+
+# uv run main.py
 # Anthropic Config
 claude_model = os.getenv("CLAUDE_MODEL", "")
 anthropic_api_key = os.getenv("ANTHROPIC_API_KEY", "")
